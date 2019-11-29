@@ -11,7 +11,8 @@ public class Main {
 
     public static void main(String[] args) {
         Random random = new Random(1);
-        Integer size = 10;
+        Integer size = 100;
+
         Grid<Cell> grid = iterate(0, i -> i < size, i -> i + 1)
                 .map(i -> new ArrayList<Cell>())
                 .peek(cells -> iterate(0, i -> i < size, i -> i + 1)
@@ -46,7 +47,13 @@ public class Main {
 
         System.out.println();
 
-        var flood = FloodFill.fill(grid, 0, 7);
-        print(flood, (cell, x, y) -> cell + "");
+        var flood = FloodFill.fill(grid, 36, 10);
+        print(flood.getResponse(), (cell, x, y) ->  {
+            if (cell.isAlive()) {
+                return "X";
+            } else {
+                return " ";
+            }
+        });
     }
 }
