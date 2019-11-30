@@ -1,8 +1,5 @@
 package ro.anud.celularautomata;
 
-import ro.anud.celularautomata.Cell;
-import ro.anud.celularautomata.Grid;
-
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.util.stream.Stream.iterate;

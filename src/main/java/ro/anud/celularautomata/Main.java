@@ -5,8 +5,8 @@ import java.util.Random;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Stream.iterate;
-import static ro.anud.celularautomata.Grid.print;
 import static ro.anud.celularautomata.GameOfLife.doSimultationStep;
+import static ro.anud.celularautomata.Grid.print;
 
 public class Main {
 
