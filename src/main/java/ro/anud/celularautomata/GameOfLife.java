@@ -10,7 +10,7 @@ import static ro.anud.celularautomata.Grid.map;
 
 public class GameOfLife {
 
-    public static Grid<Cell> doSimultationStep(Grid<Cell> grid, Integer deathLimit, Integer birthLimit) {
+    public static Grid<Cell> doSimultationStep(Grid<Cell> grid, Integer birthLimit, Integer deathLimit) {
         var aliveNeighboursGrid = map(grid, (cell, x, y) -> countAliveNeighbours(grid, x, y));
         return map(grid, (cell, x, y) -> {
             if (cell.isAlive()) {
